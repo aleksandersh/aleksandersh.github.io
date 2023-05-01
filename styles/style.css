@@ -4,18 +4,9 @@
     --text2-font-family: "Ubuntu Mono";
 }
 
-html {
-    background: linear-gradient(#00539f, #00396e);
-}
-
 body {
-    max-width: 640px;
-    margin: 0 auto;
-    background-color: #ff9500;
-    border-left: 2px solid #BBB;
-    border-right: 3px solid #333;
-    border-bottom: 3px solid #333;
-    margin-bottom: 16px;
+    margin: 0;
+    background: linear-gradient(#00539f, #00396e);
     font-family: var(--text1-font-family);
 }
 
@@ -89,6 +80,16 @@ button {
     font-family: var(--text2-font-family);
 }
 
-#background-image {
+#content-block {
+    max-width: 640px;
+    margin: 0 auto;
+    background-color: #ff9500;
+    border-left: 2px solid #BBB;
+    border-right: 3px solid #333;
+    border-bottom: 3px solid #333;
+    margin-bottom: 16px;
+}
+
+#content-background-image {
     max-width: 100%;
 }
