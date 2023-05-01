@@ -1,1 +1,50 @@
-AleksanderSh
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>My test page</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Ubuntu+Mono" rel="stylesheet" />
+    <link href="styles/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <img id="background-image" src="images/background.svg" alt="My test image" />
+
+    <h1>AleksanderSh page</h1>
+
+    <p>Welcome</p>
+
+    <h2>Tools</h2>
+
+    <div>
+        <h3>Base64</h3>
+        <label for="base64-in">Text input:</label>
+        <textarea id="base64-in" rows="5" cols="33"></textarea>
+        <div aria-orientation="horizontal">
+            <button id="base64-encode">Encode</button>
+            <button id="base64-decode">Decode</button>
+        </div>
+        <p id="base64-out"></p>
+    </div>
+
+    <div>
+        <h3>Decimal to Hex</h3>
+        <label for="decimal-to-hex-in">Text input:</label>
+        <input id="decimal-to-hex-in" type="number" />
+        <p id="decimal-to-hex-out"></p>
+    </div>
+
+    <h2>Random content</h2>
+
+    <p>Thanks for watching</p>
+
+    <script src="scripts/main.js"></script>
+
+</body>
+
+</html>

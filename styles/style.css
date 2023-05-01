@@ -1,0 +1,94 @@
+:root {
+    --content-horizontal-margin: 20px;
+    --text1-font-family: "VT323";
+    --text2-font-family: "Ubuntu Mono";
+}
+
+html {
+    background: linear-gradient(#00539f, #00396e);
+}
+
+body {
+    max-width: 640px;
+    margin: 0 auto;
+    background-color: #ff9500;
+    border-left: 2px solid #BBB;
+    border-right: 3px solid #333;
+    border-bottom: 3px solid #333;
+    margin-bottom: 16px;
+    font-family: var(--text1-font-family);
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-left: var(--content-horizontal-margin);
+    margin-right: var(--content-horizontal-margin);
+    padding: 20px 0;
+    color: #00539f;
+    text-shadow: 2px 2px 1px whitesmoke;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-left: var(--content-horizontal-margin);
+    margin-right: var(--content-horizontal-margin);
+}
+
+h3 {
+    font-size: 2rem;
+    margin-left: var(--content-horizontal-margin);
+    margin-right: var(--content-horizontal-margin);
+}
+
+p {
+    font-size: 1.3rem;
+    word-break: break-all;
+    white-space: normal;
+    margin-left: var(--content-horizontal-margin);
+    margin-right: var(--content-horizontal-margin);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    font-size: 1.2rem;
+    margin: 0.4rem var(--content-horizontal-margin);
+}
+
+input,
+textarea {
+    padding: 10px;
+    max-width: 89%;
+    line-height: 1.5;
+    background-color: #481036;
+    color: #FFFFFF;
+    border-right: 2px solid #BBB;
+    border-top: 2px solid #BBB;
+    border-right: 2px solid #333;
+    border-bottom: 2px solid #333;
+    box-shadow: 1px 1px 1px #999;
+    font-size: 1.3rem;
+    font-family: var(--text2-font-family);
+    margin: 2px var(--content-horizontal-margin);
+}
+
+button {
+    font-size: 1rem;
+    line-height: 1.1375rem;
+    border-radius: 4px;
+    padding: 0.5rem 1.2rem;
+    margin: 8px var(--content-horizontal-margin);
+    color: #FBFBFE;
+    background-color: #0060DF;
+    border: 0;
+    font-family: var(--text2-font-family);
+}
+
+#background-image {
+    max-width: 100%;
+}
