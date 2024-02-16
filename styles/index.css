@@ -1,7 +1,7 @@
 :root {
     --content-horizontal-margin-large: 20%;
-    --content-horizontal-margin-medium: 28px;
-    --content-horizontal-margin-small: 10px;
+    --content-horizontal-margin-medium: 32px;
+    --content-horizontal-margin-small: 16px;
 
     --color-dark: #1F223A;
     --color-secondary: #FFAE12;
@@ -18,6 +18,10 @@
 * {
     margin: 0;
     padding: 0;
+}
+
+body {
+    padding-bottom: 16px;
 }
 
 h1 {
@@ -193,15 +197,6 @@ a {
     font-size: 1.2rem;
 }
 
-#header-block {
-    margin: 0 auto;
-}
-
-#header-welcome-block {
-    margin-top: 64px;
-    margin-bottom: 64px;
-}
-
 #header-welcome-software-developer-block {
     margin-top: 16px;
     padding-left: 12px;
@@ -215,10 +210,4 @@ a {
     width: 12px;
     height: 2rem;
     margin-left: 8px;
-}
-
-#header-welcome-social-block {
-    margin-top: 32px;
-    margin-left: 20%;
-    margin-right: 20%;
 }
