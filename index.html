@@ -2,50 +2,80 @@
 <html lang="en-US">
 
 <head>
-
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>My test page</title>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Ubuntu+Mono" rel="stylesheet" />
-    <link href="styles/style.css" rel="stylesheet" />
-
+    <title>Aleksandr Shatalov</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono" rel="stylesheet" />
+    <link href="styles/index.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="scripts/index.js"></script>
 </head>
 
 <body>
-    <div id="content-block">
-        <img id="content-background-image" src="images/background.svg" alt="My test image" />
+    <div class="container-height-fit-content" id="header-block">
+        <div class="container-content container-flex container-flex-wrap container-center-horizontaly container-flex-align-center"
+            style="margin-top: 12px;">
+            <a class="menu-link-active" href="">
+                <div class="menu-link-border"></div>Home
+            </a>
+            <a class="menu-link" href="/old-tools.html">Old tools</a>
+        </div>
 
-        <h1>AleksanderSh page</h1>
-
-        <p>Welcome</p>
-
-        <h2>Tools</h2>
-
-        <div>
-            <h3>Base64</h3>
-            <label for="base64-in">Text input:</label>
-            <textarea id="base64-in" rows="5" cols="33"></textarea>
-            <div aria-orientation="horizontal">
-                <button id="base64-encode">Encode</button>
-                <button id="base64-decode">Decode</button>
+        <div class="container-content container-height-fit-content" id="header-welcome-block">
+            <div class="container-center-horizontaly">
+                <h1>Hi, I'm <span class="text-secondary">Aleksandr</span></h1>
             </div>
-            <p id="base64-out"></p>
+            <div class="container-center-horizontaly">
+                <div class="container-flex container-flex-wrap background-secondary container-width-fit-content"
+                    id="header-welcome-software-developer-block">
+                    <h2 class="text-dark text-bold">Sofware developer</h2>
+                    <div id="header-welcome-software-developer-cursor-block"></div>
+                </div>
+            </div>
+            <div class="container-flex container-flex-wrap" id="header-welcome-social-block">
+                <a href="https://github.com/aleksandersh"
+                    class="container-flex container-flex-align-center social-container">
+                    <img class="social-icon" src="images/icon-github.svg">
+                    <p class="social-text">GitHub</p>
+                </a>
+
+                <a href="https://www.linkedin.com/in/aleksandr-shatalov/"
+                    class="container-flex container-flex-align-center social-container">
+                    <img class="social-icon" src="images/icon-linkedin.svg">
+                    <p class="social-text">LinkedIn</p>
+                </a>
+            </div>
         </div>
-
-        <div>
-            <h3>Decimal to Hex</h3>
-            <label for="decimal-to-hex-in">Text input:</label>
-            <input id="decimal-to-hex-in" type="number" />
-            <p id="decimal-to-hex-out"></p>
-        </div>
-
-        <h2>Random content</h2>
-
-        <p>Thanks for watching</p>
-
-        <script src="scripts/main.js"></script>
-
     </div>
+
+    <div class="container-content container-width-fit-content">
+        <div class="container-flex container-width-fit-content">
+            <div class="content-line"></div>
+            <div class="content-text-block">
+                <h3>About me</h3>
+                <p class="content-text">I have been developing mobile applications and libraries for about 6 years. My
+                    main
+                    experience is
+                    developing for the Android OS, with lesser experience in iOS, and using the Flutter cross-platform
+                    framework. Currently, my job involves full-time development of server-side applications using Java.
+                    I
+                    also enjoy studying other technologies, such as creating services and programs in Go, Python, and
+                    C++.
+                    <br><br>
+                    For several years, I have held managerial positions in technical teams. My expertise spans project
+                    management, people management, building internal processes, and communication with external and
+                    internal
+                    customers, hiring and onboarding employees, as well as leading the automation of technical
+                    processes.
+                    <br><br>
+                    During leisure hours, I pursue interests in psychology and management, engaging in reading
+                    literature
+                    and articles, participating in relevant training sessions.
+                </p>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
