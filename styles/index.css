@@ -205,6 +205,12 @@ a {
     padding-bottom: 6px;
 }
 
+@media (width < 480px) {
+    #header-welcome-software-developer-text {
+        font-size: 1.6rem;
+    }
+}
+
 #header-welcome-software-developer-cursor-block {
     background-color: var(--color-dark);
     width: 12px;
