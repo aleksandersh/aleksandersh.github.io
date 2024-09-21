@@ -1,5 +1,6 @@
 :root {
     --content-horizontal-margin-large: 20%;
+    --content-wide-horizontal-margin-large: 8%;
     --content-horizontal-margin-medium: 32px;
     --content-horizontal-margin-small: 16px;
 
@@ -10,9 +11,12 @@
     --text-primary-font-family: "Ubuntu Mono";
     --text-social-color: #33FFFFFF;
 
+    --color-effect-valid: #005EB5;
+    --color-effect-invalid: #ff5959;
+
     background-color: var(--color-dark);
     color: var(--color-primary);
-    font-family: var(--text-primary-font-family);
+    font-family: var(--text-primary-font-family), serif;
 }
 
 * {
@@ -65,10 +69,6 @@ a {
     color: var(--color-dark);
 }
 
-.text-bold {
-    font-weight: bold;
-}
-
 .background-secondary {
     background-color: var(--color-secondary);
 }
@@ -94,33 +94,38 @@ a {
     }
 }
 
-.container-flex {
-    display: flex;
+@media (width >=860px) {
+    .container-content-wide {
+        margin-left: var(--content-wide-horizontal-margin-large);
+        margin-right: var(--content-wide-horizontal-margin-large);
+    }
 }
 
-.container-flex-align-center {
-    align-items: center;
+@media (width < 860px) {
+    .container-content-wide {
+        margin-left: var(--content-horizontal-margin-medium);
+        margin-right: var(--content-horizontal-margin-medium);
+    }
 }
 
-.container-flex-wrap {
-    flex-wrap: wrap;
+@media (width < 480px) {
+    .container-content-wide {
+        margin-left: var(--content-horizontal-margin-small);
+        margin-right: var(--content-horizontal-margin-small);
+    }
 }
 
-.container-center-horizontaly {
+.container-center-horizontally {
     display: flex;
     justify-content: center;
 }
 
-.container-width-fit-content {
-    width: fit-content;
-}
-
-.container-height-fit-content {
-    height: fit-content;
+.menu-link,
+.menu-link-active {
+    font-size: medium;
 }
 
 .menu-link {
-    font-size: medium;
     color: var(--color-secondary);
     padding: 6px 14px;
 }
@@ -135,8 +140,7 @@ a {
     border-style: solid;
     border-color: var(--color-primary-transparent);
     border-radius: 4px;
-    padding: 4px 12px;
-    font-size: medium;
+    padding: 5px 13px;
     color: var(--color-primary);
 }
 
@@ -144,26 +148,7 @@ a {
     border-color: var(--color-primary);
 }
 
-.social-container {
-    width: fit-content;
-    margin-right: 32px;
-    margin-top: 12px;
-    opacity: 0.7;
-}
-
-.social-container:hover {
-    opacity: 1;
-}
-
-.social-icon {
-    width: 20px;
-    height: 20px;
-}
-
-.social-text {
-    margin-left: 8px;
-    font-size: 1rem;
-}
+/* Content */
 
 .content-line {
     background-color: var(--color-primary);
@@ -179,10 +164,7 @@ a {
 
 .content-text-block {
     flex: 1;
-    margin-top: 16px;
-    margin-bottom: 16px;
-    margin-left: 32px;
-    margin-right: 36px;
+    margin: 16px 36px 16px 32px;
 }
 
 @media (width < 860px) {
@@ -197,23 +179,107 @@ a {
     font-size: 1.2rem;
 }
 
-#header-welcome-software-developer-block {
+/* Common properties */
+
+.display-block {
+    display: block;
+}
+
+.display-flex,
+.display-flex-wrap {
+    display: flex;
+}
+
+.display-flex-wrap {
+    flex-wrap: wrap;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.width-fit-content {
+    width: fit-content;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.height-fit-content {
+    height: fit-content;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+/* Index page */
+
+.index-social-container {
+    width: fit-content;
+    margin-right: 32px;
+    margin-top: 12px;
+    opacity: 0.7;
+}
+
+.index-social-container:hover {
+    opacity: 1;
+}
+
+.index-social-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.index-social-text {
+    margin-left: 8px;
+    font-size: 1rem;
+}
+
+#index-header-welcome-software-developer-block {
     margin-top: 16px;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding: 6px 12px;
 }
 
 @media (width < 480px) {
-    #header-welcome-software-developer-text {
+    #index-header-welcome-software-developer-text {
         font-size: 1.6rem;
     }
 }
 
-#header-welcome-software-developer-cursor-block {
+#index-header-welcome-software-developer-cursor-block {
     background-color: var(--color-dark);
     width: 12px;
     height: 2rem;
     margin-left: 8px;
+}
+
+/* JSON Minifier page*/
+
+.json-minifier-container-textarea {
+    flex: 1 300px;
+}
+
+.json-minifier-textarea {
+    resize: none;
+    min-height: 20em;
+    height: 60vh;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 2px solid rgba(255, 255, 255, 0);
+    outline-color: var(--color-effect-valid);
+}
+
+.json-minifier-textarea:focus {
+    box-shadow: 0 0 10px var(--color-effect-valid);
+}
+
+.json-minifier-textarea-error {
+    border: 2px solid var(--color-effect-invalid);
+    outline-color: var(--color-effect-invalid);
+}
+
+.json-minifier-textarea-error:focus {
+    box-shadow: 0 0 10px var(--color-effect-invalid);
 }
