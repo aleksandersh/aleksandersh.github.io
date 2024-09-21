@@ -174,7 +174,7 @@ a {
     }
 }
 
-.content-text {
+.content-text-block > p {
     margin-top: 32px;
     font-size: 1.2rem;
 }
