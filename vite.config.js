@@ -6,6 +6,7 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 home: resolve(__dirname, 'index.html'),
+                about: resolve(__dirname, 'about.html'),
                 json_minifier: resolve(__dirname, 'json-minifier.html'),
                 old_tools: resolve(__dirname, 'old-tools.html'),
             },

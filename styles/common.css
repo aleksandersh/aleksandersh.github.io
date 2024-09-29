@@ -8,6 +8,8 @@
     --color-secondary: #FFAE12;
     --color-primary-transparent: rgba(255, 255, 255, 0.4);
     --color-primary: #FFFFFF;
+    --color-gray: #929292;
+    --color-invisible: #92929250;
     --text-primary-font-family: "Ubuntu Mono";
     --text-social-color: #33FFFFFF;
 
@@ -25,7 +27,7 @@
 }
 
 body {
-    padding-bottom: 16px;
+    padding-bottom: 32px;
 }
 
 h1 {
@@ -57,6 +59,10 @@ a {
     text-decoration: none;
 }
 
+hr {
+    border: 1px solid var(--color-invisible);
+}
+
 .text-primary {
     color: var(--color-primary);
 }
@@ -67,6 +73,10 @@ a {
 
 .text-dark {
     color: var(--color-dark);
+}
+
+.text-gray {
+    color: var(--color-gray);
 }
 
 .background-secondary {
@@ -174,7 +184,7 @@ a {
     }
 }
 
-.content-text-block > p {
+.content-text-block>p {
     margin-top: 32px;
     font-size: 1.2rem;
 }
@@ -186,12 +196,17 @@ a {
 }
 
 .display-flex,
-.display-flex-wrap {
+.display-flex-wrap,
+.display-flex-column {
     display: flex;
 }
 
 .display-flex-wrap {
     flex-wrap: wrap;
+}
+
+.display-flex-column {
+    flex-direction: column;
 }
 
 .align-items-center {
@@ -237,8 +252,50 @@ a {
     font-size: 1rem;
 }
 
+.index-menu-icon {
+    margin: 8px 0 8px 16px;
+    width: 62px;
+    height: 62px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.7s, visibility 0.7s;
+}
+
+.index-menu-a {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #FFFFFF00;
+    border-radius: 4px;
+    transition: border-color 0.7s;
+}
+
+.index-menu-a:hover {
+    border-color: var(--color-primary-transparent);
+}
+
+.index-menu-a:hover .index-menu-icon {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.7s, visibility 0.7s;
+}
+
+.index-menu-text-container-with-icon {
+    margin: 32px 32px 32px 16px
+}
+
+.index-menu-text-container-without-icon {
+    margin: 32px 32px 32px 94px
+}
+
+.index-menu-line {
+    margin-left: 94px;
+}
+
+.index-menu-a p {
+    color: var(--color-gray);
+}
+
 #index-header-welcome-software-developer-block {
-    margin-top: 16px;
     padding: 6px 12px;
 }
 
