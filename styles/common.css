@@ -130,6 +130,11 @@ hr {
     justify-content: center;
 }
 
+.page-horizontal-margins {
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
 .menu-link,
 .menu-link-active {
     font-size: medium;
@@ -140,7 +145,8 @@ hr {
     padding: 6px 14px;
 }
 
-.menu-link:hover {
+.menu-link:hover,
+.menu-link:active {
     color: var(--color-primary);
 }
 
@@ -154,7 +160,8 @@ hr {
     color: var(--color-primary);
 }
 
-.menu-link-active:hover {
+.menu-link-active:hover,
+.menu-link-active:active {
     border-color: var(--color-primary);
 }
 
@@ -238,7 +245,8 @@ hr {
     opacity: 0.7;
 }
 
-.index-social-container:hover {
+.index-social-container:hover,
+.index-social-container:active {
     opacity: 1;
 }
 
@@ -254,11 +262,21 @@ hr {
 
 .index-menu-icon {
     margin: 8px 0 8px 16px;
-    width: 62px;
-    height: 62px;
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.7s, visibility 0.7s;
+}
+
+.index-menu-icon {
+    width: 62px;
+    height: 62px;
+}
+
+@media (width < 480px) {
+    .index-menu-icon {
+        width: 24px;
+        height: 24px;
+    }
 }
 
 .index-menu-a {
@@ -269,11 +287,13 @@ hr {
     transition: border-color 0.7s;
 }
 
-.index-menu-a:hover {
+.index-menu-a:hover,
+.index-menu-a:active {
     border-color: var(--color-primary-transparent);
 }
 
-.index-menu-a:hover .index-menu-icon {
+.index-menu-a:hover .index-menu-icon,
+.index-menu-a:active .index-menu-icon {
     visibility: visible;
     opacity: 1;
     transition: opacity 0.7s, visibility 0.7s;
@@ -287,8 +307,20 @@ hr {
     margin: 32px 32px 32px 94px
 }
 
+@media (width < 480px) {
+    .index-menu-text-container-without-icon {
+        margin-left: 56px;
+    }
+}
+
 .index-menu-line {
     margin-left: 94px;
+}
+
+@media (width < 480px) {
+    .index-menu-line {
+        margin-left: 56px;
+    }
 }
 
 .index-menu-a p {
