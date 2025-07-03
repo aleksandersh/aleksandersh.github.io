@@ -4,14 +4,14 @@
     --content-horizontal-margin-medium: 32px;
     --content-horizontal-margin-small: 16px;
 
-    --color-dark: #1F223A;
-    --color-secondary: #FFAE12;
-    --color-primary-transparent: rgba(255, 255, 255, 0.4);
-    --color-primary: #FFFFFF;
+    --color-dark: #222831;
+    --color-dark2: #393E46;
+    --color-primary: #EEEEEE;
+    --color-primary-transparent: #EEEEEE66;
+    --color-accent: #FFD369;
     --color-gray: #929292;
     --color-invisible: #92929250;
     --text-primary-font-family: "Ubuntu Mono";
-    --text-social-color: #33FFFFFF;
 
     --color-effect-valid: #005EB5;
     --color-effect-invalid: #ff5959;
@@ -35,13 +35,14 @@ h1 {
     text-align: center;
     font-style: normal;
     font-weight: normal;
+    font-weight: bold;
 }
 
 h2 {
     font-size: 2rem;
     text-align: center;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 900;
 }
 
 h3 {
@@ -68,7 +69,7 @@ hr {
 }
 
 .text-secondary {
-    color: var(--color-secondary);
+    color: var(--color-accent);
 }
 
 .text-dark {
@@ -80,7 +81,7 @@ hr {
 }
 
 .background-secondary {
-    background-color: var(--color-secondary);
+    background-color: var(--color-accent);
 }
 
 @media (width >=860px) {
@@ -135,19 +136,29 @@ hr {
     margin-right: 12px;
 }
 
+.navigation-panel {
+    background-color: var(--color-dark2);
+    padding: 16px 0px;
+    z-index: 99;
+    position: sticky;
+    top: 0;
+}
+
 .menu-link,
 .menu-link-active {
     font-size: medium;
 }
 
 .menu-link {
-    color: var(--color-secondary);
+    color: var(--color-accent);
     padding: 6px 14px;
+    transition: all .2s ease-in-out;
 }
 
 .menu-link:hover,
 .menu-link:active {
     color: var(--color-primary);
+    transform: scale(1.1);
 }
 
 .menu-link-active {
@@ -158,11 +169,13 @@ hr {
     border-radius: 4px;
     padding: 5px 13px;
     color: var(--color-primary);
+    transition: all .2s ease-in-out;
 }
 
 .menu-link-active:hover,
 .menu-link-active:active {
     border-color: var(--color-primary);
+    transform: scale(1.1);
 }
 
 /* Content */
@@ -243,11 +256,13 @@ hr {
     margin-right: 32px;
     margin-top: 12px;
     opacity: 0.7;
+    transition: all .2s ease-in-out;
 }
 
 .index-social-container:hover,
 .index-social-container:active {
     opacity: 1;
+    transform: scale(1.1);
 }
 
 .index-social-icon {
