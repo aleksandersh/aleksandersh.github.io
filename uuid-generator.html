@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>UUID Generator | Aleksandr Shatalov</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono" rel="stylesheet" />
+    <link href="styles/common.css" rel="stylesheet" />
+    <link href="styles/uuid.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="navigation-panel">
+        <div class="page-horizontal-margins display-flex-wrap container-center-horizontally align-items-center">
+            <a class="menu-link" href="/">Home</a>
+            <a class="menu-link" href="about.html">About</a>
+            <a class="menu-link-active" href="uuid-generator.html">UUID Generator</a>
+            <a class="menu-link" href="json-minifier.html">JSON Minifier</a>
+            <a class="menu-link" href="old-tools.html">Old tools</a>
+        </div>
+    </div>
+
+    <div class="page-horizontal-margins container-center-horizontally" style="margin-top: 64px;">
+        <h1>Hi, I'm <span class="text-secondary">UUID Generator</span></h1>
+    </div>
+
+    <div class="container-content-wide" style="margin-top: 64px;">
+        <h3>UUID v7 Generator</h3>
+        <div class="uuid-generator-container">
+            <div class="uuid-controls">
+                <div class="uuid-input-group">
+                    <label for="uuid-count-input">Number of UUIDs:</label>
+                    <input type="number" id="uuid-count-input" value="5" min="1" max="5000" class="uuid-input">
+                </div>
+                <button id="generate-uuid-btn" class="uuid-generate-btn">Generate UUIDs</button>
+            </div>
+
+            <div class="uuid-results" id="uuid-results">
+                <div class="uuid-results-header">
+                    <span>Generated UUIDs:</span>
+                    <button id="copy-all-btn" class="uuid-copy-all-btn" disabled>Copy All</button>
+                </div>
+                <div class="uuid-output" id="uuid-output">
+                    <div class="uuid-placeholder">Click "Generate UUIDs" to create your UUIDs</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="module" src="scripts/uuid.js"></script>
+</body>
+
+</html>
