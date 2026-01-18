@@ -3,3 +3,13 @@ services:
     build: .
     ports:
       - "5173:5173"
+    environment:
+      CHOKIDAR_USEPOLLING: "1"
+      CHOKIDAR_INTERVAL: "250"
+    volumes:
+      - .:/usr/src/app
+      - node_modules:/usr/src/app/node_modules
+    command: sh -c "npm ci && npx eleventy --watch & npx vite --host --port 5173 --strictPort"
+
+volumes:
+  node_modules:

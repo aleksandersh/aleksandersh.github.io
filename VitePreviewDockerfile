@@ -1,7 +1,7 @@
-FROM node:latest
+FROM node:20.18-alpine
 WORKDIR /usr/src/app
 COPY . .
 RUN npm ci
-RUN npx vite build
+RUN npm run build
 EXPOSE 4173
 ENTRYPOINT ["npx", "vite", "preview", "--host", "--port", "4173", "--strictPort"]

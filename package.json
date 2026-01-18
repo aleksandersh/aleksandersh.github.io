@@ -4,11 +4,15 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "eleventy --serve",
+    "dev:vite": "vite",
+    "build:html": "eleventy",
+    "build:assets": "vite build",
+    "build": "npm run build:html && npm run build:assets",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
     "vite": "^5.4.7"
   }
 }

@@ -1,0 +1,39 @@
+---
+nav: uuid-generator
+permalink: /uuid-generator.html
+topic: UUID Generator
+---
+{% include "head.liquid" %}
+
+<body>
+    {% include "nav.liquid" %}
+    {% include "header.liquid" %}
+
+    <div class="container-content-wide" style="margin-top: 64px;">
+        <h3>UUID v7 Generator</h3>
+        <div class="uuid-generator-container">
+            <div class="uuid-controls">
+                <div class="uuid-input-group">
+                    <label for="uuid-count-input">Number of UUIDs:</label>
+                    <input type="number" id="uuid-count-input" value="5" min="1" max="5000" class="uuid-input">
+                </div>
+                <button id="generate-uuid-btn" class="uuid-generate-btn">Generate UUIDs</button>
+            </div>
+
+            <div class="uuid-results" id="uuid-results">
+                <div class="uuid-results-header">
+                    <span>Generated UUIDs:</span>
+                    <button id="copy-all-btn" class="uuid-copy-all-btn" disabled>Copy All</button>
+                </div>
+                <div class="uuid-output" id="uuid-output">
+                    <div class="uuid-placeholder">Click "Generate UUIDs" to create your UUIDs</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include "script-jquery.liquid" %}
+    <script type="module" src="/assets/scripts/uuid.js"></script>
+</body>
+
+</html>

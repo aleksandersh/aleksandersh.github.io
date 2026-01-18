@@ -1,0 +1,55 @@
+---
+nav: home
+permalink: /index.html
+---
+{% include "head.liquid" %}
+
+<body>
+    {% include "nav.liquid" %}
+    {% include "header.liquid" %}
+
+    <div class="container-content" style="margin-top: 64px;">
+        <div class="display-flex-column">
+            <a class="index-menu-a" href="about.html" style="margin-top: 16px;">
+                <div class="display-flex align-items-center">
+                    <h3 class="index-menu-text-container-without-icon">
+                        <span class="text-gray">Find out</span> About Me
+                    </h3>
+                </div>
+            </a>
+            <hr class="index-menu-line" style="margin-top: 16px;">
+            <a class="index-menu-a" href="https://github.com/aleksandersh/task-tui" style="margin-top: 16px;">
+                <div class="display-flex align-items-center">
+                    <img class="index-menu-icon" src="/assets/images/icon-github.svg">
+                    <div class="index-menu-text-container-with-icon display-flex-column">
+                        <h3>
+                            <span class="text-gray">Visit</span> task-tui <span class="text-gray">project on
+                                GitHub</span>
+                        </h3>
+                        <p style="margin-top: 32px;">The tool is a client with a user interface
+                            for the Task that makes it easier to run tasks from the terminal.</p>
+                    </div>
+                </div>
+            </a>
+            <hr class="index-menu-line" style="margin-top: 16px;">
+            <a class="index-menu-a" href="https://github.com/aleksandersh/etcd-tui" style="margin-top: 16px;">
+                <div class="display-flex align-items-center">
+                    <img class="index-menu-icon" src="/assets/images/icon-github.svg">
+                    <div class="index-menu-text-container-with-icon display-flex-column">
+                        <h3>
+                            <span class="text-gray">Visit</span> etcd-tui <span class="text-gray">project on
+                                GitHub</span>
+                        </h3>
+                        <p style="margin-top: 32px;">Terminal user interface for etcd.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    {% include "script-jquery.liquid" %}
+    <script type="module" src="/assets/scripts/index.js"></script>
+    <script type="module" src="/assets/scripts/uuid.js"></script>
+</body>
+
+</html>
